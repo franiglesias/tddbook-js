@@ -1,21 +1,17 @@
-function primefactors(numberToFactorize) {
-    if(numberToFactorize === 0) {
-        throw 'No prime factors';
-    }
+function primefactors(numberToDecompose) {
+    
+    let factors = [];
 
-    var factors = [];
+    let divisor = 2;
 
-    var currentDivisor = 2;
-
-    while (numberToFactorize > 1) {
-        while(numberToFactorize % currentDivisor === 0) {
-            factors.push(currentDivisor);
-            numberToFactorize = Math.floor(numberToFactorize / currentDivisor);
+    while (divisor <= numberToDecompose) {
+        while (numberToDecompose % divisor === 0) {
+            factors.push(divisor);
+            numberToDecompose = Math.floor(numberToDecompose / divisor);
         }
-
-        currentDivisor ++;
+        divisor++;
     }
-
+    
     return factors;
 }
 
