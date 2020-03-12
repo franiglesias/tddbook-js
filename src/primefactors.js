@@ -1,17 +1,17 @@
 function primefactors(numberToDecompose) {
-    
+
     let factors = [];
 
     let divisor = 2;
 
-    while (divisor <= numberToDecompose) {
+    while (numberToDecompose > 1) {
         while (numberToDecompose % divisor === 0) {
             factors.push(divisor);
-            numberToDecompose = Math.floor(numberToDecompose / divisor);
+            numberToDecompose = Math.floor(numberToDecompose/divisor);
         }
-        divisor++;
+        divisor++;    
     }
-    
+
     return factors;
 }
 

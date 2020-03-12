@@ -37,7 +37,6 @@ describe('Calculate prime factors', function () {
         expect(primefactors(12)).toEqual([2, 2, 3])
     })
 
-
     it ('36 is 2 * 2 * 3 * 3', () => {
         expect(primefactors(36)).toEqual([2, 2, 3, 3])
     })
